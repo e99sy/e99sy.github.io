@@ -4,7 +4,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
 	<head>
 		<title>Kiran portfolio website</title>
 		<meta charset="utf-8" />
@@ -12,10 +11,10 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload dark">
 
 		<!-- Sidebar -->
-			<section id="sidebar">
+			<section id="sidebar" class="sidebar">
 				<div class="inner">
 					<nav>
 						<ul>
@@ -50,9 +49,9 @@
 						<section>
 							<a href="#" class="image"><img src="/images/profile_image.jpg" alt="" data-position="center center" /></a>
 							<div class="content" >
-								<div class="inner">
+								<div class="inner ">
 									<h2>About Me</h2>
-									<p class="inverted">I'm an Undergraduate IT engineering student enthusiastic about networking and designing.I'm looking for a position that will allow me to learn and improve.</p>
+									<p>I'm an Undergraduate IT engineering student enthusiastic about networking and designing.I'm looking for a position that will allow me to learn and improve.</p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Download CV</a></li>
 									</ul>
@@ -125,7 +124,7 @@
 									</form>
 								</section>
 								<section>
-									<ul class="contact inverted">
+									<ul class="contact">
 										<li>
 											<h3>Address</h3>
 											<span>Bharatpur-06<br />
@@ -168,6 +167,29 @@
 			</footer>
 
 		<!-- Scripts -->
+			<script>
+				var theme = 1;  // 1 -> light , 0 -> dark 
+				var icon = document.getElementById("icon");
+				icon.onclick=function(){
+					
+					
+					if(theme){
+						theme=0;
+						document.body.classList.add("light");
+						document.body.classList.remove("dark");
+						icon.src="images/sun1.png";
+					
+					}
+					else{
+						theme=1;
+						document.body.classList.add("dark");
+						document.body.classList.remove("light");
+						icon.src="images/moon.png";
+
+						}
+					}
+			</script>
+			
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -175,20 +197,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-				var icon = document.getElementById("icon");
-				icon.onclick=function(){
-					document.body.classList.toggle("dark-theme");
-					if(document.body.classList.contains("dark-theme")){
-						icon.src="images/sun.png";
-					
-					}
-					else{
-						icon.src="images/moon.png";
-					}
 			
-				}
-			</script>
-
 	</body>
 </html>
